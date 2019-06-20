@@ -1,0 +1,26 @@
+server:
+  port: 6700
+spring:
+  application:
+    name: spring-cloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://springcloudeurekaservice7100:7100/eureka/,http://springcloudeurekaservice7101:7101/eureka/
+  instance:
+    instance-id: spring-cloud-provider6700
+    prefer-ip-address: true
+info:
+  company: 哈哈
+  artifactId: $project.artifactId$
+  version: $project.version$
+  address: www.baidu.com
+  
+  
+zuul: 
+  prefix: /hh #前缀
+  ignored-services:   #如果 只有一两条可以写名称  如果有多条可以使用*
+  -   '*'
+  routes:   #对 微服务提供者的名称进行隐藏化
+    xxx.serviceId: spring-cloud-provider
+    xxx.path: /provider/**

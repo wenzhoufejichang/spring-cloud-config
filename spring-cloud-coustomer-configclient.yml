@@ -1,4 +1,4 @@
-spring:  
+spring:
   profiles:
     active:
     - dev
@@ -7,12 +7,14 @@ spring:
   profiles: dev
   application:
     name: hh
+    
 server:
-  port: 4100    
----
+  port: 4100
+---  
 spring:
   profiles: test
   application:
     name: zz
+    
 server:
-  port: 4101     
+  port: 4101

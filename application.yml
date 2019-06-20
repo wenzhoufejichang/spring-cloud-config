@@ -1,0 +1,14 @@
+spring:  
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: 哈哈
+---
+spring:
+  profiles: test
+  application:
+    name: 你好
